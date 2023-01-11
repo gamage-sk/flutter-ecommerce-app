@@ -1,3 +1,4 @@
+import 'package:ecom/screens/home_screen.dart';
 import 'package:ecom/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -68,7 +69,10 @@ final loginButton = Material(
   child: MaterialButton(
     padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
     minWidth: MediaQuery.of(context).size.width,
-    onPressed: () {},
+    onPressed: () {
+           Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => HomeScreen()));
+    },
     child: Text("Login",
                   textAlign: TextAlign.center,
                   style: TextStyle(

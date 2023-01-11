@@ -43,7 +43,7 @@ final confirmPasswordEditingController = new TextEditingController();
       ),
     );
 
-    final secondNameField = TextFormField(
+     final secondNameField = TextFormField(
       autofocus: false,
       controller: secondNameEditingController,
       keyboardType: TextInputType.name,
@@ -85,6 +85,7 @@ final confirmPasswordEditingController = new TextEditingController();
       ),
     );
 
+     
      final passwordField = TextFormField(
       autofocus: false,
       controller: passwordEditingController,
@@ -107,7 +108,8 @@ final confirmPasswordEditingController = new TextEditingController();
     );
 
 
-      final confirmPasswordField = TextFormField(
+     final confirmPasswordField = TextFormField(
+
       autofocus: false,
       controller: confirmPasswordEditingController,
       obscureText: true,
@@ -127,8 +129,39 @@ final confirmPasswordEditingController = new TextEditingController();
         ),
       ),
     );
+   
+   
+     final signUpButton = Material(
+       elevation: 5,
+       borderRadius: BorderRadius.circular(30),
+       color: Colors.lightBlueAccent,
+       child: MaterialButton(
+       padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+       minWidth: MediaQuery.of(context).size.width,
+       onPressed: () {},
+       child: Text("SignUp",
+         textAlign: TextAlign.center,
+         style: TextStyle(
+         fontSize: 20, color: Colors.white , fontWeight: FontWeight.bold),
+                    ),
+  ),
+);
+
+
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios_outlined, color: Colors.blue), 
+          onPressed: () { 
+             
+             Navigator.of(context).pop();
+
+           },
+           ),
+      ),
       body: Center(
         child:SingleChildScrollView(
           child:Container(
@@ -158,6 +191,8 @@ final confirmPasswordEditingController = new TextEditingController();
                     passwordField,
                    SizedBox(height: 20),
                     confirmPasswordField,
+                   SizedBox(height: 20 ),
+                   signUpButton,
                    SizedBox(height: 20 ),
                    
                   
