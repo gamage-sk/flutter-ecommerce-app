@@ -1,5 +1,6 @@
 import 'package:ecom/screens/home_screen.dart';
 import 'package:ecom/screens/registration_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -9,13 +10,15 @@ class LoginScreen extends StatefulWidget {
   _LoginScreenState createState() =>  _LoginScreenState();
 }
 
+
+class  _LoginScreenState extends State<LoginScreen> {
+
     final _formKey = GlobalKey<FormState>();
 
     final TextEditingController emailController = new TextEditingController();
     final TextEditingController passwordController = new TextEditingController();
 
-class  _LoginScreenState extends State<LoginScreen> {
-
+ 
   @override
   Widget build(BuildContext context) {
 

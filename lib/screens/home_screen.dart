@@ -1,3 +1,4 @@
+import 'package:ecom/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -46,9 +47,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(
                   height: 15
                 ),
-                ActionChip(label: Text("Logout"), onPressed: () {
-                  
-                },)
+                ActionChip(label: Text("Logout"),onPressed: () {
+           Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => LoginScreen()));
+    },)
               ],)
           )),
     );
